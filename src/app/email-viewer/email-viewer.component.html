@@ -1,0 +1,17 @@
+<h1>Email Viewer</h1>
+<ul class="list-group">
+  <li
+    *ngFor="let emailObj of emailList | emailPipeFilter: value"
+    class="list-group-item"
+  >
+    <!-- <div>{{ emailObj | json }}</div> -->
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">FROM : {{ emailObj.formEmail }}</h5>
+        <h5 class="card-title">TO : {{ emailObj.toEmail }}</h5>
+        <h6 class="card-text">SUBJECT : {{ emailObj.subject }}</h6>
+        <p class="card-text">BODY : {{ emailObj.body }}</p>
+      </div>
+    </div>
+  </li>
+</ul>
